@@ -1,0 +1,16 @@
+,Electric Energy Use [kWh],Electric Demand [W],Natural Gas Energy Use [kWh],Natural Gas Demand [W],Additional Fuel Use [kWh],Additional Fuel Demand [W],District Cooling Use [kWh],District Cooling Demand [W],District Heating Use [kWh],District Heating Demand [W]
+Heating -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Cooling -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,5658092.0,3516704.28,0.0,0.0
+Interior Lighting -- General,535849.19,111064.54,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Exterior Lighting -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Interior Equipment -- ElectricEquipment,671019.77,139058.04,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Exterior Equipment -- General,263946.02,63403.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Fans -- Ventilation (simple),65409.46,11946.92,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Fans -- General,308738.61,96244.87,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Pumps -- Not Subdivided,239946.15,67932.06,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Heat Rejection -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Humidification -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Heat Recovery -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Water Systems -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Refrigeration -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Generators -- Not Subdivided,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

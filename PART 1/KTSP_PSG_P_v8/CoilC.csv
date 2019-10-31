@@ -1,0 +1,5 @@
+,Type,Design Coil Load [W],Nominal Total Capacity [W],Nominal Sensible Capacity [W],Nominal Latent Capacity [W],Nominal Sensible Heat Ratio,Nominal Efficiency [W/W],Nominal Coil UA Value [W/C],Nominal Coil Surface Area [m2]
+3 COOLING COIL,Coil:Cooling:Water,1017160.33,723751.25,461392.16,262359.1,0.64,-,85942.25,871.67
+2 COOLING COIL,Coil:Cooling:Water,817998.69,617412.27,395767.67,221644.61,0.64,-,72154.31,731.83
+1 COOLING COIL,Coil:Cooling:Water,708633.88,515687.32,329491.94,186195.38,0.64,-,60728.15,615.94
+4 COOLING COIL,Coil:Cooling:Water,897612.61,690494.37,443446.37,247048.0,0.64,-,80325.77,814.71

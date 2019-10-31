@@ -1,0 +1,7 @@
+,Cooling Annual Value [kWh],Cooling Minimum Value [W],Timestamp of Minimum {TIMESTAMP},Cooling Maximum Value [W],Timestamp of Maximum {TIMESTAMP}
+PlantLoopCoolingDemand:Facility,4983637.77,0.0,01-JAN-00:10,2231235.55,20-SEP-15:10
+PlantLoopCoolingDemand:HVAC,4983637.77,0.0,01-JAN-00:10,2231235.55,20-SEP-15:10
+CoolingCoils:PlantLoopCoolingDemand,4983637.77,0.0,01-JAN-00:10,2231235.55,20-SEP-15:10
+DistrictCooling:Facility,5658092.0,20373.78,30-JAN-21:10,3516704.28,09-SEP-18:30
+DistrictCooling:Plant,5658092.0,20373.78,30-JAN-21:10,3516704.28,09-SEP-18:30
+Cooling:DistrictCooling,5658092.0,20373.78,30-JAN-21:10,3516704.28,09-SEP-18:30

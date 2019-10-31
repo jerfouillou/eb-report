@@ -1,0 +1,16 @@
+,Subcategory,Electricity [W],Natural Gas [W],Propane [W],District Cooling [W],Steam [W],Water [m3/s]
+Heating,General,0.0,0.0,0.0,0.0,0.0,0.0
+Cooling,General,0.0,0.0,0.0,3516704.28,0.0,0.0
+Interior Lighting,General,111064.54,0.0,0.0,0.0,0.0,0.0
+Exterior Lighting,General,0.0,0.0,0.0,0.0,0.0,0.0
+Interior Equipment,ElectricEquipment,139058.04,0.0,0.0,0.0,0.0,0.0
+Exterior Equipment,General,61689.6,0.0,0.0,0.0,0.0,0.0
+Fans,Ventilation (simple),11946.92,0.0,0.0,0.0,0.0,0.0
+ ,General,80585.79,0.0,0.0,0.0,0.0,0.0
+Pumps,General,65682.06,0.0,0.0,0.0,0.0,0.0
+Heat Rejection,General,0.0,0.0,0.0,0.0,0.0,0.0
+Humidification,General,0.0,0.0,0.0,0.0,0.0,0.0
+Heat Recovery,General,0.0,0.0,0.0,0.0,0.0,0.0
+Water Systems,General,0.0,0.0,0.0,0.0,0.0,0.0
+Refrigeration,General,0.0,0.0,0.0,0.0,0.0,0.0
+Generators,General,0.0,0.0,0.0,0.0,0.0,0.0

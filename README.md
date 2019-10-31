@@ -1,2 +1,2 @@
-# eb-report
-First draft - working
+# EB Report Generation
+
