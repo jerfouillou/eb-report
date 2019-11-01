@@ -7,7 +7,7 @@ Created on Wed Oct 30 09:58:55 2019
 #IMPORT LIBRARIES
 import requests
 import pandas as pd
-import numpy as np
+#import numpy as np
 #import matplotlib.pyplot as plt
 
 id = 2159
@@ -76,18 +76,26 @@ def assignCatAndType(values):
 
 """This function takesthe formatted values (with types and categoreies), and creates a dataframe containing a 
 unique entry for each value (the summary table). The summary table can then be used directly to fill the report sheet"""
-def fillSummaryTable(row, formattedvalues, summarytable):
-   
-    """PROBLEM IS HERE"""
-    uvalue = formattedvalues[row,'U-Factor no Film [W/m2-K]']
-    types = formattedvalues[row,'type']
-    category=formattedvalues[row,'category']
-    if category in summarytable['category'] and types in summarytable['Type']:
-        pass
-    else :
-        print("got this far")
-        summarytable.append(category, types, uvalue)
-        pass
+def fillSummaryTable(row, summary):
+    uvalue = row['U-Factor with Film [W/m2-K]']
+    types = row["type"]
+    category=row["category"]
+    #print(category)
+    #print(types)
+    """problem: what if the referred category and type are not the same row"""
+    i = 0
+    for index,rows in summary.iterrows():
+        if category == summary[rows, "category"] and types == summary[rows,"types"]:
+            i=i+1
+    if i == 0 :
+        newrow = pd.DataFrame.from_dict([{"category" : category, "type" : types, 'U-Factor with Film [W/m2-K]' : uvalue}])
+        summary = summary.append(newrow,  ignore_index = True, sort = False)
+        
+    print(i)
+    return summary
+
+
+
 
 
 
@@ -95,7 +103,8 @@ def fillSummaryTable(row, formattedvalues, summarytable):
 values = getByKeyword(id,"opaque")
 formattedvalues = assignCatAndType(values)
 summarytable = pd.DataFrame(columns = ['Category','Type','U-Value (W/m2K)'])
-formattedvalues.apply(fillSummaryTable, axis = 0, args = (formattedvalues, summarytable))# = formattedvalues, summarytable = summarytable)
+print(summarytable)
+summarytable = formattedvalues.apply(fillSummaryTable, axis = 1, summary = summarytable)# = formattedvalues, summarytable = summarytable)
 #formattedvalues.apply(fillSummaryTable, uvalue = formattedvalues['U-Factor no Film [W/m2-K]'], types = formattedvalues['type'], category=formattedvalues['category'], summarytable = summarytable)
 print("DONE")
 
