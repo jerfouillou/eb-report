@@ -8,7 +8,7 @@ Created on Wed Oct 30 09:58:55 2019
 import requests
 import pandas as pd
 summarytable = pd.DataFrame(columns = ['Category','Type','U-Value (W/m2K)'])
-
+df0 = pd.DataFrame()
 
 #API CALL FUNCTION
 def replace_value(dict, value_to_find, value_to_replace):
@@ -27,7 +27,7 @@ def dict2df(dict, cols):
     return df
 
 def getByKeyword(id,keyword):
-    url='http://hkgaet105/project/api/'+str(id)+'/'+keyword
+    url='http://hkg1902w0057/project/api/'+str(id)+'/'+keyword
     r = requests.get(url)
     #print (r.json()[0])
     value=r.json()[0]["json"]
@@ -46,6 +46,7 @@ def assignCategory(row):
         return "Wall"
     elif row == 180:
         return "Roof"
+ 
 
 def assignType(row, types):
     i = 1
@@ -89,12 +90,12 @@ def fillSummaryTable(row):
         summarytable = summarytable.append(newrow,  ignore_index = True, sort = False)
     pass
 
-def main(id):
+def main_opaque(id):
     values = getByKeyword(id,"opaque")
     formattedvalues = assignCatAndType(values)
     formattedvalues.apply(fillSummaryTable, axis = 1)
     return(summarytable)
     print("DONE")
 
-main(2159)
-
+main_opaque(3953)
+df0 = getByKeyword(3953,"opaque")
