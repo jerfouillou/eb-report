@@ -26,26 +26,31 @@ def dict2df(dict, cols):
     df.loc[:,cols] = df[cols].apply(pd.to_numeric, errors='coerce')
     return df
 
-def getByKeyword(id,keyword):
-    url='http://hkg1902w0057/project/api/'+str(id)+'/'+keyword
+def getByKeyword(id,keyword, servername):
+    url=servername+str(id)+'/'+keyword
     r = requests.get(url)
     #print (r.json()[0])
     value=r.json()[0]["json"]
     raw_dict=replace_value(value,'\xa0',"")
+    
     cols=list(raw_dict.keys())
+    cols.remove("Construction")
+    cols.remove("Cardinal Direction")
     df=dict2df(raw_dict,cols)
+    #print(df)
     return df
 
 
 """This function assigns the 'type' of each entry in the dataframe. Maybe the boundaries can be discusses (can a roof be <180 
 degrees??)"""
 def assignCategory(row):
-    if row == 0:
+    return row
+    """if row == 0:
         return "Floor"
     elif row > 0 and row < 180:
         return "Wall"
     elif row == 180:
-        return "Roof"
+        return "Roof"""
  
 
 def assignType(row, types):
@@ -60,7 +65,16 @@ def assignType(row, types):
 finding the number of types, and assigning these accordingly. Once all types have been added to the 3 dataframes,
 the function concatenates the dataframes to form the "formatted vales" dataframe"""
 def assignCatAndType(values):
-    values.loc[:,"category"]=values["Tilt [deg]"].apply(assignCategory)
+    values.loc[:,"category"]=values["Construction"].apply(assignCategory)
+    categories = values["category"].unique()
+    formattedvalues = pd.DataFrame()
+    for i in categories:
+        filteredconstructions = values[(values.category==i)]
+        construction_u_types = filteredconstructions["U-Factor with Film [W/m2-K]"].unique()
+        filteredconstructions.loc[:,"type"] = filteredconstructions["U-Factor with Film [W/m2-K]"].apply(assignType, types = construction_u_types) 
+        formattedvalues= pd.concat([formattedvalues, filteredconstructions], axis = 0)
+    return formattedvalues
+    """
     wall = values[(values.category=="Wall")]    
     wall_u_types = wall["U-Factor with Film [W/m2-K]"].unique()
     wall.loc[:,"type"] = wall["U-Factor with Film [W/m2-K]"].apply(assignType, types = wall_u_types) 
@@ -71,7 +85,7 @@ def assignCatAndType(values):
     floor_u_types = floor["U-Factor with Film [W/m2-K]"].unique() 
     floor.loc[:,"type"] = floor["U-Factor with Film [W/m2-K]"].apply(assignType, types = floor_u_types)
     formattedvalues=pd.concat([wall,roof,floor], axis=0)
-    return formattedvalues
+    return formattedvalues"""
 
 
 """This function takes the formatted values (with types and categoreies), and appends unique entries
@@ -90,12 +104,12 @@ def fillSummaryTable(row):
         summarytable = summarytable.append(newrow,  ignore_index = True, sort = False)
     pass
 
-def main_opaque(id):
-    values = getByKeyword(id,"opaque")
+def main_envelope(id, servername):
+    values = getByKeyword(id,"opaque", servername)
     formattedvalues = assignCatAndType(values)
     formattedvalues.apply(fillSummaryTable, axis = 1)
     return(summarytable)
-    print("DONE")
 
-main_opaque(3953)
-df0 = getByKeyword(3953,"opaque")
+
+#main_opaque(3953,"http://hkg1902w0057/project/api/")
+#df0 = getByKeyword(3953,"opaque", "http://hkg1902w0057/project/api/")
