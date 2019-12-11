@@ -1,0 +1,5 @@
+,Type,Total Efficiency [W/W],Delta Pressure [pa],Max Air Flow Rate [m3/s],Rated Electric Power [W],Rated Power Per Max Air Flow Rate [W-s/m3],Motor Heat In Air Fraction,End Use,Design Day Name for Fan Sizing Peak,Date/Time for Fan Sizing Peak
+3 SUPPLY FAN,Fan:VariableVolume,1.0,1500.0,21.99,32992.45,1500.0,1.0,General,ANN CLG .4% CONDNS DB=>MWB,7/21 17:10:00
+2 SUPPLY FAN,Fan:VariableVolume,1.0,1500.0,19.17,28750.4,1500.0,1.0,General,ANN CLG .4% CONDNS DB=>MWB,7/21 17:10:00
+1 SUPPLY FAN,Fan:VariableVolume,1.0,1500.0,15.81,23717.87,1500.0,1.0,General,ANN CLG .4% CONDNS DB=>MWB,7/21 17:20:00
+4 SUPPLY FAN,Fan:VariableVolume,1.0,1500.0,21.59,32384.07,1500.0,1.0,General,ANN CLG .4% CONDNS DB=>MWB,7/21 17:20:00

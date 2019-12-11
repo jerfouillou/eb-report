@@ -1,0 +1,17 @@
+,Source Electricity [kWh/m2],Source Natural Gas [kWh/m2],Source Additional Fuel [kWh/m2],Source District Cooling [kWh/m2],Source District Heating [kWh/m2]
+Heating,0.0,0.0,0.0,0.0,0.0
+Cooling,0.0,0.0,0.0,727.51,0.0
+Interior Lighting,206.7,0.0,0.0,0.0,0.0
+Exterior Lighting,0.0,0.0,0.0,0.0,0.0
+Interior Equipment,258.84,0.0,0.0,0.0,0.0
+Exterior Equipment,101.81,0.0,0.0,0.0,0.0
+Fans,144.32,0.0,0.0,0.0,0.0
+Pumps,92.56,0.0,0.0,0.0,0.0
+Heat Rejection,0.0,0.0,0.0,0.0,0.0
+Humidification,0.0,0.0,0.0,0.0,0.0
+Heat Recovery,0.0,0.0,0.0,0.0,0.0
+Water Systems,0.0,0.0,0.0,0.0,0.0
+Refrigeration,0.0,0.0,0.0,0.0,0.0
+Generators,0.0,0.0,0.0,0.0,0.0
+ , , , , , 
+Total Source Energy End Use Components,804.22,0.0,0.0,727.51,0.0

@@ -1,0 +1,5 @@
+,High Limit Shutoff Control,Minimum Outdoor Air [m3/s],Maximum Outdoor Air [m3/s],Return Air Temp Limit,Return Air Enthalpy Limit,Outdoor Air Temperature Limit [C],Outdoor Air Enthalpy Limit [C]
+3 OA CONTROLLER,FixedEnthalpy,12.16,21.99,56900.0, , , 
+2 OA CONTROLLER,FixedEnthalpy,8.94,19.17,56900.0, , , 
+1 OA CONTROLLER,FixedEnthalpy,8.71,15.81,56900.0, , , 
+4 OA CONTROLLER,FixedEnthalpy,9.51,21.59,56900.0, , , 
